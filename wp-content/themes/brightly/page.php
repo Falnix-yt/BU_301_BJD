@@ -1,0 +1,5 @@
+<?php get_header(); ?>
+<?php brightly_theme()->get( 'content' )->render(); ?>
+<?php
+get_footer();
+
