@@ -6,3 +6,57 @@ Author URI: https://www.wpserveur.net
 Template: brightly
 Version: 0.1.0
 */
+
+/* HEADER MOBILE */
+.mobile-header {
+    position: relative;
+	background-color: #a10d2d;
+	padding: 15px 20px 30px;
+}
+
+/* Courbe en bas */
+.mobile-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* ajuster la hauteur de la courbe */
+  background-color: white; /* couleur du fond en dessous */
+  border-top-left-radius: 50% 80px; 
+  border-top-right-radius: 50% 80px;
+} 
+
+
+/* Ligne principale */
+.mobile-header-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Zones */
+.header-left,
+.header-right {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.header-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* Icônes */
+.header-icon {
+	width: 45px;
+	height: auto;
+}
+
+/* Logo */
+.header-logo {
+	height: 60px;
+	width: auto;
+}
