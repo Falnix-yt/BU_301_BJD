@@ -19,8 +19,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 	<div class="mobile-header-top">
 
 		<div class="header-left">
-			<img src="http://localhost/BU_301_BJD/wp-content/uploads/2026/01/menu_blanc.svg" alt="Menu" class="header-icon">
-			<img src="" alt="Recherche" class="header-icon">
+			<img src="http://localhost/BU_301_BJD/wp-content/uploads/2026/01/menu_blanc.svg" alt="Menu" class="menu">
+			<img src="http://localhost/BU_301_BJD/wp-content/uploads/2026/01/loupe-blanc.svg" alt="Recherche" id="loupe">
 		</div>
 
 		<div class="header-center">
@@ -28,7 +28,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 		</div>
 
 		<div class="header-right">
-			<img src="http://localhost/BU_301_BJD/wp-content/uploads/2026/01/compte_blanc.svg" alt="Compte" class="header-icon">
+			<img src="http://localhost/BU_301_BJD/wp-content/uploads/2026/01/compte_blanc.svg" alt="Compte" class="compte">
 		</div>
 
 	</div>

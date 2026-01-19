@@ -50,7 +50,7 @@ Version: 0.1.0
 }
 
 /* Icônes */
-.header-icon {
+.menu, .compte{
 	width: 45px;
 	height: auto;
 }
@@ -59,4 +59,9 @@ Version: 0.1.0
 .header-logo {
 	height: 60px;
 	width: auto;
+}
+
+#loupe{
+	width : 30px;
+	height: auto;
 }
