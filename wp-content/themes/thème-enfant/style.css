@@ -7,6 +7,8 @@ Template: brightly
 Version: 0.1.0
 */
 
+/* ===== HEADER ===== */
+
 /* HEADER MOBILE */
 .mobile-header {
     position: relative;
@@ -66,78 +68,187 @@ Version: 0.1.0
 	height: auto;
 }
 
-.ouvrage-swiper img {
+/* ===== CARROUSEL ===== */
+
+/* Conteneur du carrousel */
+.ouvrage-swiper {
     width: 100%;
-    border-radius: 12px;
+    max-width: 600px; /* largeur max sur desktop */
+    margin: 0 auto;
 }
 
-.reco-grid {
+/* Chaque slide */
+.ouvrage-swiper .swiper-slide {
     display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.reco-item {
-    flex: 1 1 calc(33.333% - 16px);
-    text-align: center;
-    margin-bottom: 16px;
-    text-decoration: none;
-    color: inherit;
-}
-
-.reco-item img {
+/* Images */
+.ouvrage-swiper .swiper-slide img {
     width: 100%;
-    border-radius: 12px;
-    display: block;
-    margin-bottom: 8px;
+    height: 200px;       /* hauteur uniforme */
+    object-fit: cover;   /* crop pour remplir le cadre */
+    border-radius: 6px;
 }
 
-.reco-title {
-    font-size: 1rem;
-    font-weight: bold;
+/* Pagination et flèches */
+.ouvrage-swiper .swiper-button-prev,
+.ouvrage-swiper .swiper-button-next {
+    color: #000; /* tu peux changer la couleur */
 }
 
-/* Mobile */
+/* Responsive */
 @media (max-width: 768px) {
-    .reco-item {
-        flex: 1 1 100%;
+    .ouvrage-swiper .swiper-slide img {
+        height: 150px; /* réduit la hauteur sur mobile */
     }
 }
 
+
+/* ===== WRAPPER ICONS ===== */
 .circle-wrapper {
   display: flex;
   justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
 }
 
-/* Cercle */
+/* ===== CERCLES ===== */
 .circle-image {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  overflow: hidden;
+  background-color: #a10e2f;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
+}
+.circle-image2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   background-color: #a10e2f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
+/* ===== ICÔNES ===== */
 .circle-image img {
-  width: 70%;
-  height: 70%;
+  object-fit: contain;
+  display: block;
+}
+/* ===== ICÔNES ===== */
+.circle-image2 img {
+  object-fit: contain;
+  display: block;
 }
 
-/* 📱 MOBILE : 4 sur une ligne */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+
   .circle-wrapper {
+    gap: 10px;
     flex-wrap: nowrap;
-    gap: 6px;
   }
 
   .circle-image {
-    width: 22vw;  /* ≈ 4 ronds visibles sur mobile */
+    width: 22vw;
     height: 22vw;
+  }
+
+  .circle-image img {
+    width: 13vw;
+    height: auto;
+  }
+  .circle-image2 img {
+    width: 15vw;
+    height: auto;
   }
 }
 
+/* ===== AVIS ===== */
+
+.ouvrage-avis {
+  margin-top: 60px;
+  padding: 30px;
+  background: #f7f7f7;
+  border-radius: 12px;
+}
+
+.ouvrage-avis h2 {
+  margin-bottom: 20px;
+}
+
+/* formulaire plus clean */
+.gl-star-rating,
+.gl-sr-review-form {
+  margin-top: 15px;
+}
+
+/* ===== RECOMMANDATIONS ===== */
+
+.ouvrage-reco {
+  margin-top: 80px;
+}
+
+.ouvrage-reco h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.reco-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.reco-card {
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.reco-card:hover {
+  transform: translateY(-4px);
+}
+
+.reco-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.reco-title {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .reco-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .reco-card img {
+    height: 140px;
+  }
+
+  .reco-title {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

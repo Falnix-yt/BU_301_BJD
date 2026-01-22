@@ -159,3 +159,74 @@ Stack trace:
   thrown in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 24
 [21-Jan-2026 10:35:47 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_terms` (`name`, `slug`, `term_group`) VALUES ('thème-enfant', 'theme-enfant', 0) made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('after_setup_theme'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, kubio_get_editor_colors, kubio_get_global_data_content, kubio_global_data_post_id, wp_set_post_terms, wp_set_object_terms, wp_insert_term
 [21-Jan-2026 10:35:48 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_terms` (`name`, `slug`, `term_group`) VALUES ('thème-enfant', 'theme-enfant', 0) made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('after_setup_theme'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, kubio_get_editor_colors, kubio_get_global_data_content, kubio_global_data_post_id, wp_set_post_terms, wp_set_object_terms, wp_insert_term
+[21-Jan-2026 22:02:35 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php:24
+Stack trace:
+#0 C:\xampp\htdocs\BU_301_BJD\wp-includes\template-loader.php(125): include()
+#1 C:\xampp\htdocs\BU_301_BJD\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\BU_301_BJD\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 24
+[21-Jan-2026 22:03:18 UTC] PHP Warning:  Undefined variable $post in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\functions.php on line 66
+[21-Jan-2026 22:03:18 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\functions.php on line 66
+[21-Jan-2026 22:03:18 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php:24
+Stack trace:
+#0 C:\xampp\htdocs\BU_301_BJD\wp-includes\template-loader.php(125): include()
+#1 C:\xampp\htdocs\BU_301_BJD\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\BU_301_BJD\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 24
+[21-Jan-2026 22:04:49 UTC] PHP Parse error:  syntax error, unexpected token "endwhile", expecting end of file in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 132
+[21-Jan-2026 22:05:50 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php:33
+Stack trace:
+#0 C:\xampp\htdocs\BU_301_BJD\wp-includes\template-loader.php(125): include()
+#1 C:\xampp\htdocs\BU_301_BJD\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\BU_301_BJD\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 33
+[21-Jan-2026 22:06:12 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php:24
+Stack trace:
+#0 C:\xampp\htdocs\BU_301_BJD\wp-includes\template-loader.php(125): include()
+#1 C:\xampp\htdocs\BU_301_BJD\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\BU_301_BJD\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 24
+[21-Jan-2026 22:08:09 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:09 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033284') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:11 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:11 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033286') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:13 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:13 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033288') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:26 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:26 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033301') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:27 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:27 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033302') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:30 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:08:30 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033305') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:10:17 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:10:17 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033412') made by require('wp-admin/edit-form-advanced.php'), require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033585') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033585') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033585') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:10 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033585') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:14 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:13:14 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033589') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:14:22 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings', 'libraryContent=browse') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:14:22 UTC] WordPress database error Duplicate entry '0' for key 'PRIMARY' for query INSERT INTO `wp_usermeta` (`user_id`, `meta_key`, `meta_value`) VALUES (1, 'wp_user-settings-time', '1769033657') made by require_once('wp-admin/admin-header.php'), wp_user_settings, update_user_option, update_user_meta, update_metadata, add_metadata
+[21-Jan-2026 22:14:24 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php:24
+Stack trace:
+#0 C:\xampp\htdocs\BU_301_BJD\wp-includes\template-loader.php(125): include()
+#1 C:\xampp\htdocs\BU_301_BJD\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\BU_301_BJD\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 24
+[21-Jan-2026 22:16:32 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php:33
+Stack trace:
+#0 C:\xampp\htdocs\BU_301_BJD\wp-includes\template-loader.php(125): include()
+#1 C:\xampp\htdocs\BU_301_BJD\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\BU_301_BJD\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\BU_301_BJD\wp-content\themes\thème-enfant\single-ouvrages.php on line 33
