@@ -1,64 +1,73 @@
 <?php
 /**
-** activation theme
-**/
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+ * Activation du thème et enqueues
+ **/
+
+// Enqueue styles parent et enfant
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles() {
+    // Style du thème parent
+    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 
-	// style du thème parent
-	wp_enqueue_style(
-		'parent-style',
-		get_template_directory_uri() . '/style.css'
-	);
-
-	// style du thème enfant
-	wp_enqueue_style(
-		'child-style',
-		get_stylesheet_uri(),
-		array('parent-style')
-	);
+    // Style du thème enfant
+    wp_enqueue_style('child-style', get_stylesheet_uri(), array('parent-style'));
 }
 
-add_action('wp_footer', function () { ?>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.ouvrage-swiper', {
-        loop: true,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-});
-</script>
-<?php });
+// Enqueue Swiper CSS et JS + JS custom
+add_action('wp_enqueue_scripts', 'ouvrages_enqueue_assets');
+function ouvrages_enqueue_assets() {
 
-function ouvrages_swiper_assets() {
+    // Swiper CSS
     wp_enqueue_style(
         'swiper-css',
         'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'
     );
 
+    // Swiper JS
     wp_enqueue_script(
         'swiper-js',
         'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
-        [],
+        array(),
+        null,
+        true
+    );
+
+    // JS custom pour initialiser le carrousel
+    wp_enqueue_script(
+        'ouvrage-swiper-js',
+        get_stylesheet_directory_uri() . '/ouvrage-swiper.js', // <-- CORRECT : ajout du slash
+        array('swiper-js'),
         null,
         true
     );
 }
-add_action('wp_enqueue_scripts', 'ouvrages_swiper_assets');
 
-// Création du type de post "Ouvrages"
+/**
+ * Création du Custom Post Type "Ouvrages"
+ **/
 function creer_type_post_ouvrages() {
+    $labels = array(
+        'name' => 'Ouvrages',
+        'singular_name' => 'Ouvrage',
+        'add_new' => 'Ajouter un ouvrage',
+        'add_new_item' => 'Ajouter un nouvel ouvrage',
+        'edit_item' => 'Modifier l\'ouvrage',
+        'new_item' => 'Nouvel ouvrage',
+        'view_item' => 'Voir l\'ouvrage',
+        'search_items' => 'Rechercher un ouvrage',
+        'not_found' => 'Aucun ouvrage trouvé',
+        'not_found_in_trash' => 'Aucun ouvrage dans la corbeille'
+    );
+
     $args = array(
-        'label' => 'Ouvrages',
+        'labels' => $labels,
         'public' => true,
         'has_archive' => true,
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'ouvrages'), // pour avoir /ouvrages/nom-du-livre
+        'rewrite' => array('slug' => 'ouvrages'),
+        'show_in_rest' => true, // pour Gutenberg / ACF
     );
+
     register_post_type('ouvrages', $args);
 }
 add_action('init', 'creer_type_post_ouvrages');
