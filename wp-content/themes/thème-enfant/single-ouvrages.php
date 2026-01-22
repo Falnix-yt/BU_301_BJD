@@ -78,11 +78,8 @@ get_header();
         <?php endif; ?>
 
         <div class="auteur-infos">
-            <?php if($nom_auteur): ?>
-                <h3><?php echo esc_html($nom_auteur); ?></h3>
-            <?php endif; ?>
             <?php if($desc_auteur): ?>
-                <p><?php echo wp_kses_post($desc_auteur); ?></p>
+                <p class="descr-photo"><?php echo wp_kses_post($desc_auteur); ?></p>
             <?php endif; ?>
         </div>
     <?php endif; ?>
@@ -120,47 +117,39 @@ get_header();
 </section>
 
 <!-- RECOMMANDATIONS -->
+<?php
+// Nombre de recommandations à afficher
+$reco_count = 3;
+
+// Récupérer 3 ouvrages aléatoires différents du livre courant
+$random_books = new WP_Query(array(
+    'post_type'      => 'ouvrages',
+    'posts_per_page' => $reco_count,
+    'post__not_in'   => array(get_the_ID()), // Exclut le livre actuel
+    'orderby'        => 'rand'
+));
+
+if ( $random_books->have_posts() ) : ?>
 <section class="ouvrage-reco">
-
-    <h2>Suggestions de lecture</h2>
-
+    <h2>Recommandations</h2>
     <div class="reco-grid">
+        <?php while ( $random_books->have_posts() ) : $random_books->the_post(); ?>
+            <a href="<?php the_permalink(); ?>" class="reco-card">
+                <?php 
+                // Affiche l'image mise en avant
+                if ( has_post_thumbnail() ) : 
+                    the_post_thumbnail('medium', array('class'=>'reco-img'));
+                else : ?>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/default-book.png" alt="Pas d'image disponible" class="reco-img">
+                <?php endif; ?>
+                
+                <p class="reco-title"><?php the_title(); ?></p>
+            </a>
+        <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+</section>
+<?php endif; ?>
 
-    <?php
-    $reco_query = new WP_Query(array(
-        'post_type'      => 'ouvrages',
-        'posts_per_page' => 3,
-        'post__not_in'   => array(get_the_ID()), // exclut le livre actuel
-        'orderby'        => 'rand' // aléatoire
-    ));
-
-    if($reco_query->have_posts()):
-        while($reco_query->have_posts()):
-            $reco_query->the_post();
-
-            $image = get_field('image_1_livre');
-            if(is_array($image)){
-                $src = $image['url'];
-            } else {
-                $src = '';
-            }
-    ?>
-
-        <a href="<?php the_permalink(); ?>" class="reco-card">
-
-            <?php if($src): ?>
-                <img src="<?php echo esc_url($src); ?>" alt="">
-            <?php endif; ?>
-
-            <p class="reco-title"><?php the_title(); ?></p>
-
-        </a>
-
-    <?php
-        endwhile;
-        wp_reset_postdata();
-    endif;
-    ?>
 
     </div>
 </section>

@@ -69,146 +69,150 @@ Version: 0.1.0
 }
 
 /* ===== CARROUSEL ===== */
-
-/* Conteneur du carrousel */
 .ouvrage-swiper {
     width: 100%;
-    max-width: 600px; /* largeur max sur desktop */
-    margin: 0 auto;
+    max-width: 400px; /* mobile friendly */
+    margin: 20px auto;
 }
 
-/* Chaque slide */
 .ouvrage-swiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Images */
 .ouvrage-swiper .swiper-slide img {
-    width: 100%;
-    height: 200px;       /* hauteur uniforme */
-    object-fit: cover;   /* crop pour remplir le cadre */
-    border-radius: 6px;
+    width: 50%;
+    height: auto; /* laisser la hauteur s’adapter */
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Pagination et flèches */
 .ouvrage-swiper .swiper-button-prev,
 .ouvrage-swiper .swiper-button-next {
-    color: #000; /* tu peux changer la couleur */
+    color: #a10e2f; /* couleur du thème */
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .ouvrage-swiper .swiper-slide img {
-        height: 150px; /* réduit la hauteur sur mobile */
-    }
+/* ===== TITRE ===== */
+.ouvrage-single h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 20px 0 15px;
 }
 
+/* ===== DESCRIPTION ===== */
+.ouvrage-description {
+    max-width: 90%;
+    margin: 0 auto 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
 
-/* ===== WRAPPER ICONS ===== */
+/* ===== AUTEUR ===== */
+.ouvrage-single .auteur-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    max-width: 90%;
+    margin: 0 auto 40px;
+}
+
+.auteur-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+.descr-photo{
+    margin-top: -80px;
+    font-size: 12px;
+    padding-left: 100px;
+}
+
+/* ===== CERCLES / ICONES ===== */
 .circle-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  margin: 40px 0;
+  gap: 15px;
+  margin: 30px 0;
 }
 
-/* ===== CERCLES ===== */
 .circle-image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #a10e2f;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
 }
+
 .circle-image2 {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #a10e2f;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
 }
 
-/* ===== ICÔNES ===== */
 .circle-image img {
+  width: 60%;
+  height: auto;
   object-fit: contain;
-  display: block;
 }
-/* ===== ICÔNES ===== */
 .circle-image2 img {
+  width: 75%;
+  height: auto;
   object-fit: contain;
-  display: block;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-  .circle-wrapper {
-    gap: 10px;
-    flex-wrap: nowrap;
-  }
-
-  .circle-image {
-    width: 22vw;
-    height: 22vw;
-  }
-
-  .circle-image img {
-    width: 13vw;
-    height: auto;
-  }
-  .circle-image2 img {
-    width: 15vw;
-    height: auto;
-  }
 }
 
 /* ===== AVIS ===== */
-
 .ouvrage-avis {
-  margin-top: 60px;
-  padding: 30px;
+  margin-top: 40px;
+  padding: 20px;
   background: #f7f7f7;
   border-radius: 12px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ouvrage-avis h2 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/* formulaire plus clean */
 .gl-star-rating,
 .gl-sr-review-form {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* ===== RECOMMANDATIONS ===== */
-
 .ouvrage-reco {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .ouvrage-reco h2 {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .reco-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 livres par ligne */
+  gap: 10px;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .reco-card {
@@ -219,36 +223,41 @@ Version: 0.1.0
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reco-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
-.reco-card img {
+.reco-img {
   width: 100%;
-  height: 220px;
+  height: 140px;
   object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
 .reco-title {
-  padding: 10px;
-  font-size: 14px;
+  padding: 6px;
+  font-size: 12px;
   text-align: center;
+  margin: 4px 0;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .reco-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
 
-  .reco-card img {
-    height: 140px;
+  .reco-img {
+    height: 100px;
   }
 
   .reco-title {
-    font-size: 12px;
-    padding: 6px;
+    font-size: 11px;
   }
 }
