@@ -1,217 +1,229 @@
 /*
 Theme Name: theme enfantde brightly
-Description: Theme enfant de BJD BRIGHTLY
-Author: BJD - BRIGHTLY
-Author URI: https://www.wpserveur.net
 Template: brightly
 Version: 0.1.0
 */
 
-/* ===== HEADER ===== */
 
-/* HEADER MOBILE */
-.mobile-header {
-  position: relative;
-  background-color: #a10d2d;
-  padding: 15px 20px 30px;
+/* ===================================================== */
+/* =============== RESET PROPRE ======================== */
+/* ===================================================== */
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #111;
 }
 
-/* Courbe en bas */
+h1 {
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  margin: 25px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ===================================================== */
+/* ================= HEADER ROUGE ====================== */
+/* ===================================================== */
+
+.mobile-header {
+  position: relative;
+  background: #a10e2f;
+  padding: 15px 20px 35px;
+}
+
+/* courbe blanche */
 .mobile-header::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
-  height: 20px; /* ajuster la hauteur de la courbe */
-  background-color: white; /* couleur du fond en dessous */
-  border-top-left-radius: 50% 80px;
-  border-top-right-radius: 50% 80px;
+  height: 28px;
+  background: #fff;
+  border-top-left-radius: 60% 80px;
+  border-top-right-radius: 60% 80px;
 }
 
-/* Ligne principale */
 .mobile-header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Zones */
-.header-left,
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.header-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Icônes */
 .menu,
 .compte {
-  width: 45px;
-  height: auto;
+  width: 42px;
 }
 
-/* Logo */
 .header-logo {
-  height: 60px;
-  width: auto;
+  height: 55px;
 }
 
-#loupe {
-  width: 30px;
-  height: auto;
+
+/* ===================================================== */
+/* ================= CARROUSEL LIVRE =================== */
+/* ===================================================== */
+
+.ouvrage-swiper {
+  max-width: 260px;
+  margin: 0 auto 20px;
 }
 
 .ouvrage-swiper img {
-  width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
 }
 
-.reco-grid {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
 
-.reco-item {
-  flex: 1 1 calc(33.333% - 16px);
+/* ===================================================== */
+/* ================= DESCRIPTION ======================= */
+/* ===================================================== */
+
+.ouvrage-description {
+  max-width: 85%;
+  margin: 0 auto 25px;
+  font-size: 14px;
   text-align: center;
-  margin-bottom: 16px;
-  text-decoration: none;
-  color: inherit;
+  line-height: 1.5;
 }
 
-.reco-item img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-  margin-bottom: 8px;
-}
 
-.reco-title {
-  font-size: 1rem;
-  font-weight: bold;
-}
+/* ===================================================== */
+/* ================= AUTEUR ============================ */
+/* ===================================================== */
 
-/* Mobile */
-@media (max-width: 768px) {
-  .reco-item {
-    flex: 1 1 100%;
-  }
-}
+.auteur-infos {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  max-width: 90%;
+  margin: 20px auto 30px;
 }
 
 .auteur-photo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 20px;
-}
-.descr-photo{
-    margin-top: -80px;
-    font-size: 12px;
-    padding-left: 100px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-left: 20px;
 }
 
-/* ===== CERCLES / ICONES ===== */
+.auteur-infos h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.auteur-infos p {
+  font-size: 13px;
+  margin: 4px 0 0;
+  color: #555;
+}
+
+
+/* ===================================================== */
+/* ================= ICONES RONDES ===================== */
+/* ===================================================== */
+
 .circle-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin: 30px 0;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 25px auto;
 }
 
 .circle-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #a10e2f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+  width: 22vw;
+  height: 22vw;
+  max-width: 65px;
+  max-height: 65px;
 
-.circle-image2 {
-  width: 60px;
-  height: 60px;
   border-radius: 50%;
-  background-color: #a10e2f;
+  background: #a10e2f;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .circle-image img {
-  width: 60%;
-  height: auto;
+  width: 55%;
   object-fit: contain;
 }
+
+.circle-image2 {
+  width: 22vw;
+  height: 22vw;
+  max-width: 65px;
+  max-height: 65px;
+
+  border-radius: 50%;
+  background: #a10e2f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .circle-image2 img {
-  width: 75%;
-  height: auto;
+  width: 73%;
   object-fit: contain;
 }
 
-/* ===== AVIS ===== */
+/* ===================================================== */
+/* ================= AVIS ============================== */
+/* ===================================================== */
+
 .ouvrage-avis {
-  margin-top: 40px;
+  margin: 35px auto;
   padding: 20px;
-  background: #f7f7f7;
-  border-radius: 12px;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  background: #f5f5f5;
+  border-radius: 16px;
+  max-width: 92%;
 }
 
-.ouvrage-avis h2 {
-  margin-bottom: 15px;
-  text-align: center;
-}
 
-.gl-star-rating,
-.gl-sr-review-form {
-  margin-top: 10px;
-}
+/* ===================================================== */
+/* ================= RECOMMANDATIONS =================== */
+/* ===================================================== */
 
-/* ===== RECOMMANDATIONS ===== */
 .ouvrage-reco {
-  margin-top: 50px;
+  margin: 45px auto;
+  max-width: 95%;
 }
 
-.ouvrage-reco h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+/* 3 livres comme ta maquette */
 .reco-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 livres par ligne */
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  max-width: 95%;
-  margin: 0 auto;
 }
 
 .reco-card {
   text-decoration: none;
   color: inherit;
-  background: white;
+  text-align: center;
+
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.2s;
 }
 
 .reco-card:hover {
@@ -220,33 +232,99 @@ Version: 0.1.0
 
 .reco-img {
   width: 100%;
-  height: 140px;
+  height: 110px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
 }
 
 .reco-title {
+  font-size: 11px;
   padding: 6px;
-  font-size: 12px;
-  text-align: center;
-  margin: 4px 0;
+  font-weight: 600;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .reco-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+
+/* ===================================================== */
+/* ================= DESKTOP AJUSTEMENTS =============== */
+/* ===================================================== */
+
+@media (min-width: 900px) {
+
+  h1 {
+    font-size: 34px;
   }
-}
+
+  .ouvrage-swiper {
+    max-width: 380px;
+  }
 
   .circle-image {
-    width: 22vw; /* ≈ 4 ronds visibles sur mobile */
-    height: 22vw;
+    width: 70px;
+    height: 70px;
   }
 
+  .reco-img {
+    height: 160px;
+  }
+}
 
-/* Conteneur général */
+/* ===================================================== */
+/* ================= MENU MOBILE OVERLAY ================ */
+/* ===================================================== */
+.menu-dropdown {
+  position: relative;
+}
+
+/* caché par défaut */
+.submenu {
+  position: absolute;
+  top: 60px; /* sous le header */
+  left: 0;
+
+  background: #a10e2f;
+  min-width: 180px;
+
+  padding: 15px 20px;
+  border-radius: 10px;
+
+  list-style: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+
+  transition: 0.25s ease;
+
+  z-index: 9999;
+}
+
+/* visible */
+.submenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* items */
+.submenu li {
+  margin-bottom: 12px;
+}
+
+.submenu li:last-child {
+  margin-bottom: 0;
+}
+
+.submenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+/* ===================================================== */
+/* ================= PAGE RECHERCHE =================== */
+/* ===================================================== */
+
+/* Conteneur des résultats */
 .livres-resultats {
   max-width: 1100px;
   margin: 40px auto;
@@ -275,13 +353,11 @@ Version: 0.1.0
 /* Image */
 .livre img {
     width: 100%;
-    height: auto;      /* permet de garder les proportions */
-    max-height: none;  /* supprime la limite de 260px */
-    object-fit: contain; /* affiche l'image entière */
+    height: auto;
+    object-fit: contain;
     border-radius: 10px;
     margin-bottom: 15px;
 }
-
 
 /* Titres */
 .livre h3 {
@@ -314,120 +390,124 @@ Version: 0.1.0
   box-shadow: 0 0 0 3px rgba(161, 14, 47, 1);
 }
 
-/* Conteneur du formulaire */
-form {
-  max-width: 650px;
-  margin: 50px auto;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 50px;
-  padding: 6px;
-
-  box-shadow: 0 0 0 3px rgba(161, 14, 47, 1);
-}
-
-/* Champ de recherche */
-form input[type="text"] {
-  flex: 1;
-  padding: 16px 22px;
-  border: none;
-  border-radius: 50px;
-  font-size: 1rem;
-  outline: none;
-  color: #333;
-}
-
-/* Placeholder */
-form input[type="text"]::placeholder {
-  color: #999;
-}
-
-/* Bouton */
-form button {
-  padding: 14px 28px;
-  border-radius: 50px;
-  border: none;
-  background: #a10e2f;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Hover bouton */
-form button:hover {
-  background: #7f0b24;
-  transform: scale(1.05);
-}
-
-/* Focus effet */
-form:focus-within {
-  box-shadow: 0 0 0 3px rgb(41, 41, 41);
-}
-
-form button::before {
-  content: "🔍";
-  margin-right: 8px;
+/* ================= PAGE RECHERCHE =================== */
+.recherche-livres-page {
+    text-align: center;
 }
 
 /* Titres */
-h1,
-h2 {
-  text-align: center;
+.recherche-livres-page .recherche-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 25px 0;
 }
 
-.livre {
+.recherche-livres-page .recherche-subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+.recherche-livres-page .recherche-form {
+    max-width: 650px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
     background: #fff;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* ombre légère par défaut */
+    border-radius: 50px;
+    padding: 6px;
+    box-shadow: 0 0 0 3px rgba(161, 14, 47, 1);
 }
 
-.livre:hover {
-
-    transform: translateY(-3px); /* léger déplacement vers le haut */
+.recherche-livres-page .recherche-input {
+    flex: 1;
+    padding: 16px 22px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    color: #333;
 }
 
-.menu-dropdown {
-    position: relative;
-    display: inline-block;
+.recherche-livres-page .recherche-input::placeholder {
+    color: #999;
 }
 
-.menu-dropdown .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(0,0,0,0.85);
-    border-radius: 5px;
-    padding: 5px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    min-width: 180px;
-    z-index: 999;
-}
-
-.menu-dropdown .submenu.open {
-    display: block;
-}
-
-.menu-dropdown .submenu li {
-    list-style: none;
-}
-
-.menu-dropdown .submenu li a {
-    display: block;
-    padding: 10px 15px;
+.recherche-livres-page .recherche-button {
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: none;
+    background: #a10e2f;
     color: #fff;
-    text-decoration: none;
-}
-
-.menu-dropdown .submenu li a:hover {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.menu-dropdown .menu {
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.recherche-livres-page .recherche-button:hover {
+    background: #7f0b24;
+    transform: scale(1.05);
+}
+
+.recherche-livres-page .recherche-button::before {
+    content: "🔍";
+    margin-right: 8px;
+}
+
+/* Résultats livres */
+.recherche-livres-page .livres-resultats {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.recherche-livres-page .recherche-livre {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.recherche-livres-page .recherche-livre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.recherche-livres-page .recherche-livre-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recherche-livres-page .recherche-livre-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.recherche-livres-page .recherche-livre-author {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.recherche-livres-page .recherche-livre-desc {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Aucun résultat */
+.recherche-livres-page .recherche-noresult {
+    font-size: 1rem;
+    color: #555;
+    margin: 20px 0;
 }

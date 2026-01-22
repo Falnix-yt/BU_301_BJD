@@ -101,3 +101,14 @@ function custom_menu_click_script() {
     wp_add_inline_script( 'jquery-core', $js );
 }
 add_action('wp_enqueue_scripts', 'custom_menu_click_script');
+
+function theme_scripts() {
+  wp_enqueue_script(
+    'menu-js',
+    get_stylesheet_directory_uri() . '/menu.js',
+    [],
+    filemtime(get_stylesheet_directory() . '/menu.js'),
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'theme_scripts');

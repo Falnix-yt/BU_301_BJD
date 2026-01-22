@@ -36,7 +36,7 @@
 					</div>
 
 					<!-- Recherche -->
-					<a href="<?php echo get_permalink(get_page_by_path('recherche')); ?>">
+					<a href="<?php echo get_permalink(get_page_by_path('recherche-2')); ?>">
 						<img src="http://localhost/BU_301_BJD/wp-content/uploads/2026/01/loupe-blanc.svg" alt="Recherche" id="loupe">
 					</a>
 				</div>
